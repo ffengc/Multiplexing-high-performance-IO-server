@@ -128,5 +128,23 @@ while(true)
 5. The encoding is quite complex.
 
 ## poll
+### what is poll
+Poll is actually just making some improvements on select.
+Compared to select, the improvements of poll are as follows:
+1. The input and output parameters are separated, so there is no need for a large number of reset operations
+2. Poll supervised File descriptor no longer has upper limit
+![](./figs/13.png)
+
+### Advantages and disadvantages of poll
+Advantages of poll:
+1. High efficiency (compared to multiple processes and threads)
+2. There are a large number of links, with only a small number being active, which is more suitable
+3. Input and output are separate and do not require extensive resetting
+4. Parameter level, no upper limit for managing fd
+Disadvantages of poll:
+1. It still needs to be traversed, and it is the same as detecting fd readiness at the user level and kernel level
+2. It is also difficult to avoid the need for kernel to user copying
+3. The code for poll is also relatively complex, but easier than select
+In fact, the main drawback is still the first one. In order to solve this drawback, we introduced epoll, which means "enhanced poll". However, in fact, epoll is much better than poll.
 
 ## epoll
