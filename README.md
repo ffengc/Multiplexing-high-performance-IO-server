@@ -133,7 +133,9 @@ Poll is actually just making some improvements on select.
 Compared to select, the improvements of poll are as follows:
 1. The input and output parameters are separated, so there is no need for a large number of reset operations
 2. Poll supervised File descriptor no longer has upper limit
-![](./figs/13.png)
+
+
+![](./figs/14.png)
 
 ### Advantages and disadvantages of poll
 Advantages of poll:
