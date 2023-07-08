@@ -79,19 +79,7 @@ Tips: Because both the user and the kernel will modify the same bitmap. So fd_ A
 
 ### build a server with select
 
-![](./figs/5.png)
-
-![](./figs/6.png)
-
-![](./figs/7.png)
-
-![](./figs/8.png)
-
-![](./figs/10.png)
-
-![](./figs/11.png)
-
-![](./figs/12.png)
+- [select-readme](./readme-pdfs/poll-readme.pdf)
 
 **Specific code details can be found in the source code.**
 
@@ -127,14 +115,15 @@ while(true)
 5. The encoding is quite complex.
 
 ## poll
+
+- [poll-readme](./readme-pdfs/poll-readme.pdf)
+
 ### what is poll
 Poll is actually just making some improvements on select.
 Compared to select, the improvements of poll are as follows:
 1. The input and output parameters are separated, so there is no need for a large number of reset operations
 2. Poll supervised File descriptor no longer has upper limit
 
-
-![](./figs/14.png)
 
 ### Advantages and disadvantages of poll
 Advantages of poll:
@@ -149,3 +138,4 @@ Disadvantages of poll:
 In fact, the main drawback is still the first one. In order to solve this drawback, we introduced epoll, which means "enhanced poll". However, in fact, epoll is much better than poll.
 
 ## epoll
+- [epoll-readme](./readme-pdfs/epoll-readme.pdf)
