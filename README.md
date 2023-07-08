@@ -4,6 +4,12 @@
 
 Here are three types of high-performance IO servers, implemented through multiplexing. They are select, poll, and epoll, respectively. The code implementation language is C/C++. The three servers inside can be combined with the HTTP server, Web server (multi threaded version, etc.), SystemV and other IO models in the BitCode repository to write servers with high IO performance.
 
+## the readme-pdfs
+the readmes detail can be seen in the pdfs.
+- [select-readme](./readme-pdfs/select-readme.pdf)
+- [poll-readme](./readme-pdfs/poll-readme.pdf)
+- [epoll-readme](./readme-pdfs/epoll-readme.pdf)
+
 ## The definetion of high-performance-IO
 
 The essence of network communication is IO
@@ -33,18 +39,11 @@ Taking reading as an example:
 Why? Because the waiting time per unit time is very low. If a thread/process wants to participate in IO, we call it synchronous IO.
 `IO = wait+copy`, so-called participation actually means either participating in wait, participating in copy, or both at the same time.
 
-![](./figs/1.png)
-
 ### How to perform non-blocking IO?
 
 1. Make IO non blocking. When turned on, you can specify a non blocking interface
 2. We use a unified approach for non blocking setting **`fcntl()`;**
 
-![](./figs/2.png)
-
-![](./figs/3.png)
-
-![](./figs/4.png)
 
 Codes can be seen in `./non-block-example`
 
