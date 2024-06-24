@@ -2,7 +2,6 @@
 
 ![](./logo.png)
 
-
 **多路转接高性能IO服务器**
 
 Here are three types of high-performance IO servers, implemented through multiplexing. They are select, poll, and epoll, respectively. The code implementation language is C/C++. The three servers inside can be combined with the HTTP server, Web server (multi threaded version, etc.), SystemV and other IO models in the BitCode repository to write servers with high IO performance.
